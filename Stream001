@@ -1,25 +1,17 @@
-kapelusze = [Hats.Brown_Hat, Hats.Carrot_Hat, Hats.Gray_Hat, Hats.Green_Hat, Hats.Purple_Hat, Hats.Straw_Hat, Hats.Traffic_Cone]
-k = 0
-def Dron_Go_Home():
-	x, y = get_pos_x(), get_pos_y()
-	while x != 0:
-		move(East)
-		x = get_pos_x()
-	while y != 0:
-		move(North)
-		y = get_pos_y()
-	print('Dron gotowy do użytku')
-for i in range(3):
+import GO_HOME
+import kapelusik
+for i in range(5):
 	for i in range(get_world_size()):
 		till()
 		move(North)
 	move(East)
-Dron_Go_Home()
+	kapelusik.nowy_kapelutek()
+GO_HOME.Dron_Go_Home()
 while True:
 	#trzy pierwsze
-	for i in range(3):
+	for i in range(5):
 		#dynia
-		for i in range(3):
+		for i in range(5):
 			harvest()
 			if get_water() < 0.5:
 				use_item(Items.Water)
@@ -33,15 +25,18 @@ while True:
 			plant(Entities.Carrot)
 			move(North)
 		move(East)
+		kapelusik.nowy_kapelutek()
 	#drzewa
-	for i in range(3):
+	for i in range(4):
 		harvest()
 		if get_water() < 0.5:
 			use_item(Items.Water)
 		plant(Entities.Tree)
 		move(North)
+		harvest()
 		move(North)
 	move(East)
+	kapelusik.nowy_kapelutek()
 	#siano
 	for i in range(get_world_size()):
 		harvest()
@@ -49,13 +44,16 @@ while True:
 			use_item(Items.Water)
 		move(North)
 	move(East)
+	kapelusik.nowy_kapelutek()
 	#drzewa
-	for i in range(3):
+	for i in range(4):
 		harvest()
 		if get_water() < 0.5:
 			use_item(Items.Water)
 		plant(Entities.Tree)
 		move(North)
+		harvest()
 		move(North)
 	move(East)
+	kapelusik.nowy_kapelutek()
 	
