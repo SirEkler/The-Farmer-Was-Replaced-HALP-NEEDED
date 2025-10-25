@@ -1,0 +1,9 @@
+def Dron_Go_Home():
+	x, y = get_pos_x(), get_pos_y()
+	while x != 0:
+		move(East)
+		x = get_pos_x()
+	while y != 0:
+		move(North)
+		y = get_pos_y()
+	print('Dron gotowy do użytku')
