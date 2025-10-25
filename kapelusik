@@ -1,0 +1,8 @@
+k = 0
+kapelusze = [Hats.Brown_Hat, Hats.Carrot_Hat, Hats.Gray_Hat, Hats.Green_Hat, Hats.Purple_Hat, Hats.Straw_Hat, Hats.Traffic_Cone]
+def nowy_kapelutek():
+	global k
+	change_hat(kapelusze[k])
+	k += 1
+	k = k % 7
+	
