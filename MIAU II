@@ -1,0 +1,7 @@
+import GO_HOME
+import kapelusik
+import DYNIE 
+import KAKTUSY
+GO_HOME.Dron_Go_Home()
+DYNIE.nieposionym()
+KAKTUSY.alegorunc()
