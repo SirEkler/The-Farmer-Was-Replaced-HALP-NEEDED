@@ -1,0 +1,8 @@
+x, y = get_pos_x(), get_pos_y()
+while x != 2:
+	move(East)
+	x = get_pos_x()
+while y != 3:
+	move(North)
+	y = get_pos_y()
+print('Rdy byczq')
