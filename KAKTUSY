@@ -1,0 +1,41 @@
+#def alegorunc():
+	import kapelusik
+	kapelusik.nowy_kapelutek()
+	x, y = get_pos_x(), get_pos_y()
+	NNWSSWNN = 2
+	#pierwsza kolumna
+	for i in range(NNWSSWNN+1):
+		x, y = get_pos_x(), get_pos_y()
+		till()
+		if get_water() < 0.5:
+			use_item(Items.Water)	
+		plant(Entities.Cactus)
+		if y != 5:
+			move(North)
+		else:
+			move(West)
+			kapelusik.nowy_kapelutek()
+	#druga kolumna
+	for i in range(NNWSSWNN+1):
+		x, y = get_pos_x(), get_pos_y()
+		till()
+		if get_water() < 0.5:
+			use_item(Items.Water)	
+		plant(Entities.Cactus)
+		if y != 3:
+			move(South)
+		else:
+			move(West)
+			kapelusik.nowy_kapelutek()
+	#trzecia kolumna
+	for i in range(NNWSSWNN+1):
+		x, y = get_pos_x(), get_pos_y()
+		till()
+		if get_water() < 0.5:
+			use_item(Items.Water)	
+		plant(Entities.Cactus)
+		if y != 5:
+			move(North)
+		else:
+			kapelusik.nowy_kapelutek()
+			break
