@@ -1,0 +1,56 @@
+def nieposionym():
+	import kapelusik
+	x, y = get_pos_x(), get_pos_y()
+	NNESSENN = 2
+	# pierwsza kolumna
+	while y <= NNESSENN:
+		till()
+		MsMori = 0
+		while can_harvest() == False and MsMori < 99:
+			if get_water() < 0.5:
+				use_item(Items.Water)	
+			plant(Entities.Pumpkin)
+			do_a_flip()
+			MsMori = MsMori + 1
+		if y != NNESSENN:
+			move(North)
+		else:
+			move(East)
+			kapelusik.nowy_kapelutek()
+			break
+		x, y = get_pos_x(), get_pos_y()
+	#druga kolumna
+	while y >= 0:
+		till()
+		MsMori = 0
+		while can_harvest() == False and MsMori < 99:
+			if get_water() < 0.5:
+				use_item(Items.Water)	
+			plant(Entities.Pumpkin)
+			do_a_flip()
+			MsMori = MsMori + 1
+		if y != 0:
+			move(South)
+		else:
+			move(East)
+			kapelusik.nowy_kapelutek()
+			break
+		x, y = get_pos_x(), get_pos_y()
+	#trzecia kolumna
+	while y <= NNESSENN:
+		till()
+		MsMori = 0
+		while can_harvest() == False and MsMori < 99:
+			if get_water() < 0.5:
+				use_item(Items.Water)	
+			plant(Entities.Pumpkin)
+			do_a_flip()
+			MsMori = MsMori + 1
+		if y != NNESSENN:
+			move(North)
+		else:
+			harvest()
+			kapelusik.nowy_kapelutek()
+			move(North)
+			break
+		x, y = get_pos_x(), get_pos_y()
