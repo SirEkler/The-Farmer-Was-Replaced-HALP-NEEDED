@@ -1,0 +1,20 @@
+for i in range(2):
+	z1 = measure()
+	move(East)
+	z2 = measure()
+	if z2 < z1:
+		swap(West)
+move(South)
+for i in range(2):
+	z1 = measure()
+	move(West)
+	z2 = measure()
+	if z2 > z1:
+		swap(East)
+move(South)
+for i in range(2):
+	z1 = measure()
+	move(East)
+	z2 = measure()
+	if z2 < z1:
+		swap(West)
