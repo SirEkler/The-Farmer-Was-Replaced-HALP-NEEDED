@@ -56,4 +56,3 @@ while True:
 		move(North)
 	move(East)
 	kapelusik.nowy_kapelutek()
-	
